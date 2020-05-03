@@ -1,7 +1,7 @@
-package test.caseMatch
+package test.matchCase
 
-object ExceptionTest {
-  def main(args:Array[String]):Unit={
+object TypeMatch {
+  def main(args: Array[String]): Unit = {
     try{
       val a = 1 / 0
     }catch{

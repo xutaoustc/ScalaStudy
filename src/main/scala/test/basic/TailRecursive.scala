@@ -1,4 +1,4 @@
-package test.function
+package test.basic
 
 object TailRecursive {
   def main(args:Array[String]):Unit={
