@@ -1,4 +1,4 @@
-package test.classAndObject
+package test.b_classAndObject
 
 class Cat{
   // private变量，直接生成name()和name_$eq()

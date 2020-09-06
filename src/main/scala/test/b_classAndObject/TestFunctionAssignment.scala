@@ -1,4 +1,4 @@
-package test.classAndObject
+package test.b_classAndObject
 
 object TestFunctionAssignment {
   val a, b = getVal
