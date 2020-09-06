@@ -1,4 +1,4 @@
-package test.basic
+package test.a_basic
 
 import scala.util.control.Breaks._
 

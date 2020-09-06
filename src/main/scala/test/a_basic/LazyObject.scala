@@ -1,4 +1,4 @@
-package test.basic
+package test.a_basic
 
 object LazyObject {
   def main(args: Array[String]): Unit = {
