@@ -1,6 +1,6 @@
-package test.packageVisible.p1
+package test.d_packageVisible.p1
 
-import test.packageVisible.p2.Rabbit
+import test.d_packageVisible.p2.Rabbit
 
 class AccessRabbit {
   def fun():Unit={
