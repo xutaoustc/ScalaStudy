@@ -1,7 +1,8 @@
-package test.traitTest
+package test.f_traitTest
 
 object DynamicMixin {
   def main(args:Array[String]):Unit={
+    // 降低耦合性
     val orableDB = new OrableDB with Operate
     orableDB.insert()
   }
