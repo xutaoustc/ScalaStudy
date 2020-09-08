@@ -12,6 +12,8 @@ trait Operate{
   def insert():Unit={
     println("insert")
   }
+
+  var operateType:String = "insert"
 }
 
 class OrableDB{}
