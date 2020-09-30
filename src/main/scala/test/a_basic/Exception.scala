@@ -7,6 +7,7 @@ object Exception {
     try {
 //      throwsException()
     } catch {
+      // 一个catch多个case
       case e: IllegalArgumentException => println("illegal arg. exception");
       case e: IllegalStateException    => println("illegal state exception");
       case e: IOException              => println("IO exception");
