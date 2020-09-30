@@ -2,11 +2,11 @@ package test.a_basic
 
 object LazyObject {
   def main(args: Array[String]): Unit = {
-    lazy val a = aa
+    lazy val v = getValueFunction
     println("-----")
   }
 
-  def aa={
+  def getValueFunction={
     "hello"
   }
 }
