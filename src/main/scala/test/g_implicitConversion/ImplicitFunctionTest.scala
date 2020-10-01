@@ -1,4 +1,4 @@
-package test.implicitConversion
+package test.g_implicitConversion
 
 object ImplicitFunctionTest {
   def main(args:Array[String]):Unit={
