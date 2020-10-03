@@ -13,6 +13,8 @@ object CaseClassMatch {
 
     dollar match{
       case Dollar(v)=> println(v)
+      //如果不想获得值（隐藏变量名），使用_即可
+      //case Dollar(_)=>
     }
 
     val amt = Currency(10,"CNY")
