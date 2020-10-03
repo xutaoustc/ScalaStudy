@@ -1,4 +1,4 @@
-package test.matchCase
+package test.h_matchCase
 
 object TupleMatch {
   def main(args: Array[String]): Unit = {

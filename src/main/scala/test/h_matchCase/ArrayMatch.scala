@@ -1,4 +1,4 @@
-package test.matchCase
+package test.h_matchCase
 
 object ArrayMatch {
   def main(args: Array[String]): Unit = {
