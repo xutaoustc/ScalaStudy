@@ -11,7 +11,7 @@ object MatchInVariableDeclare {
     for((k,v)<-map){
     }
 
-    // 只取value为1的值
+    // 筛选出value为1的值
     for((k,1)<-map){
     }
 
