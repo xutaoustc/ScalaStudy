@@ -20,6 +20,12 @@ object AbstractControl {
     alwaysCatch{
       1/0
     }
+
+    var x = 10
+    until(x>0){
+      x -= 1
+      println("x=" + x)
+    }
   }
 
   def alwaysCatch(op: =>Unit):Unit={
@@ -27,6 +33,14 @@ object AbstractControl {
       op
     }catch{
       case e: Exception => println ("error")
+    }
+  }
+
+
+  def until(condition: => Boolean)(block: => Unit): Unit ={
+    if(condition){
+      block
+      until(condition)(block)
     }
   }
 }
