@@ -1,4 +1,4 @@
-package test.function
+package test.i_function
 
 //控制抽象，在定义方法时去掉()，在调用时就可以省去()=>。 例如： op: => Unit
 //    在Scala中，我们可以将一系列语句归组成不带参数也没有返回值的函数。举例来说，如下函数在线程中执行某段代码：

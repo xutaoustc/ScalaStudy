@@ -1,4 +1,4 @@
-package test.function
+package test.i_function
 
 // 在Scala里，我们可以使用case语句来创建一个匿名函数（函数字面量）
 // List(1,2,3) map {case i:Int=>i+1},  这很有趣，case i:Int=>i+1构建的匿名函数等同于(i:Int)=>i+1

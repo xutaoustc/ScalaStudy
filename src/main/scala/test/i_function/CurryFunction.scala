@@ -1,4 +1,4 @@
-package test.function
+package test.i_function
 
 object CurryFunction {
   def main(args: Array[String]): Unit = {
