@@ -1,29 +1,26 @@
 package test.i_function
 
-// 在Scala里，我们可以使用case语句来创建一个匿名函数（函数字面量）
-// List(1,2,3) map {case i:Int=>i+1},  这很有趣，case i:Int=>i+1构建的匿名函数等同于(i:Int)=>i+1
-// case语句“额外”的好处：case语句（组合）除了可以被编译为匿名函数（类型是FunctionX，在Scala里，所有的函数字面量都是一个对象，
-// 这个对象的类型是FunctionX），还可以非常方便的编译为一个偏函数PartialFunction！（注意：PartialFunction同时是Function1的子类）
-// 编译器会根据调用处的函数类型声明自动帮我们判定如何编译这个case语句
-
-// 从collect这个示例的效果上去理解偏函数：它只对会作用于指定类型的参数或指定范围值的参数实施计算，超出它的界定范围之外的参数类型和值它会忽略
-
 object PartialFunctionTest {
   def main(args: Array[String]): Unit = {
+    // 如果我们想对一个List里面所有的数字+1，但是要过滤掉字符串，我们可以使用：
+    //    1. filter+map的方式， 但是稍显麻烦
+    //    2. 也可以使用map+模式匹配，但是又要对字符串模式匹配时返回的空值做过滤
+    // 在对符合某个条件，而不是所有情况执行逻辑操作时，使用偏函数是一个不错的选择
+    // 将包在大括号内的一组case语句封装为函数，我们称之为偏函数
     val list = List(1,2,3,4,"ha")
 
-    // 对符合某个条件，而不是所有情况执行逻辑操作时
     val partialFun = new PartialFunction[Any,Int] {
+      // 如果返回true, 会调用apply；如果是false，则会被过滤
       override def isDefinedAt(x: Any): Boolean = {
         x.isInstanceOf[Int]
       }
-
       override def apply(v1: Any): Int = {
         v1.asInstanceOf[Int] + 1
       }
     }
 
-    // map不支持偏函数，因为map底层是要处理所有元素
+    // 使用偏函数
+    // 说明：如果使用偏函数，则不能使用map，应该使用collect。map不支持偏函数，因为map底层是要处理所有元素
     val list2 = list.collect(partialFun)
     println(list2)
 
